@@ -47,12 +47,12 @@ if [ ! -f /usr/bin/swift ]; then
 		wget  -O ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz $u1$u2
 	fi
 
-	if [ ! -d swift-5.9.1-RELEASE-ubuntu22.04 ]; then
+	if [ ! -d ~/swift-5.9.1-RELEASE-ubuntu22.04 ]; then
 		tar xvzf ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz -C ~/
 	fi
 
-	if [ -d swift-5.9.1-RELEASE-ubuntu22.04 ]; then
-		cp -r -f /root/swift-5.9.1-RELEASE-ubuntu22.04/* /
+	if [ -d ~/swift-5.9.1-RELEASE-ubuntu22.04 ]; then
+		cp -r -f ~/swift-5.9.1-RELEASE-ubuntu22.04/* /
 	fi
 
 fi
