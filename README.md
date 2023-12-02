@@ -42,8 +42,9 @@ if [ ! -f /usr/bin/swift ]; then
 	fi
 
 	if [ "$_sum" == "" ]; then
-	 wget  -O ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz \
-	 https://download.swift.org/swift-5.9.1-release/ubuntu2204/swift-5.9.1-RELEASE/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz
+		u1='https://download.swift.org/swift-5.9.1-release/ubuntu2204'
+		u2='/swift-5.9.1-RELEASE/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz'
+		wget  -O ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz $u1$u2
 	fi
 
 	if [ ! -d swift-5.9.1-RELEASE-ubuntu22.04 ]; then
