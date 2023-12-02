@@ -37,11 +37,13 @@ if [ ! -f /usr/bin/swift ]; then
 
 	_sum=""
 	if [ -f ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz ]; then
-		_sum="`sha256sum ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz | grep ea2fe1190a9cb8abed8c5e7b94223a06a23c7dc8cd498850a1c79b8a87e7c251`"
+		_sum="`sha256sum ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz | \
+		grep ea2fe1190a9cb8abed8c5e7b94223a06a23c7dc8cd498850a1c79b8a87e7c251`"
 	fi
 
 	if [ "$_sum" == "" ]; then
-		wget  -O ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz https://download.swift.org/swift-5.9.1-release/ubuntu2204/swift-5.9.1-RELEASE/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz
+	  wget  -O ~/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz \
+	  https://download.swift.org/swift-5.9.1-release/ubuntu2204/swift-5.9.1-RELEASE/swift-5.9.1-RELEASE-ubuntu22.04.tar.gz
 	fi
 
 	if [ ! -d swift-5.9.1-RELEASE-ubuntu22.04 ]; then
