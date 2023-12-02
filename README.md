@@ -22,7 +22,7 @@ if [ ! -d ~/Winter-vapor ]; then cd ~/ ; git clone https://github.com/AndyInAi/W
 
 cd  ~/Winter-vapor
 
-xz -d -p App.xz
+xz -d -k App.xz
 
 chmod +x ./App
 
